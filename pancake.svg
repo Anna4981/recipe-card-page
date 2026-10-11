@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img" aria-label="Stack of pancakes">
+  <rect width="800" height="360" fill="#fbe3c4"/>
+  <ellipse cx="400" cy="300" rx="230" ry="38" fill="#ffffff"/>
+  <ellipse cx="400" cy="296" rx="200" ry="30" fill="#f3f3f3"/>
+  <g>
+    <rect x="260" y="230" width="280" height="50" rx="25" fill="#d9903f"/>
+    <ellipse cx="400" cy="232" rx="140" ry="24" fill="#f0b765"/>
+    <rect x="270" y="190" width="260" height="46" rx="23" fill="#d9903f"/>
+    <ellipse cx="400" cy="192" rx="130" ry="22" fill="#f4c27a"/>
+    <rect x="280" y="152" width="240" height="44" rx="22" fill="#d9903f"/>
+    <ellipse cx="400" cy="154" rx="120" ry="21" fill="#f6c982"/>
+  </g>
+  <path d="M310 154 Q400 90 490 154 Q470 200 440 180 Q420 215 400 185 Q380 215 360 180 Q330 200 310 154Z" fill="#8a4b1c" opacity="0.9"/>
+  <rect x="368" y="118" width="64" height="30" rx="5" fill="#ffe88a"/>
+  <rect x="368" y="118" width="64" height="10" rx="5" fill="#fff3b0"/>
+</svg>

@@ -1,0 +1,127 @@
+/* Reset: border-box makes width include padding + border (box model) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #fdf3e7;
+  --card: #ffffff;
+  --text: #3b2a1e;
+  --muted: #7a6554;
+  --accent: #e07a1f;
+  --border: #f0dcc4;
+  --space: 1.5rem; /* one spacing unit keeps the card consistent */
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: var(--space);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+/* Card container */
+.recipe-card {
+  width: 100%;
+  max-width: 900px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(90, 50, 10, 0.12);
+  overflow: hidden;
+}
+
+.recipe-header {
+  padding: var(--space);
+  text-align: center;
+}
+
+.recipe-header h1 {
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.recipe-meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+/* Image */
+.recipe-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  object-fit: cover;
+}
+
+.recipe-figure figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--muted);
+  padding: 0.5rem var(--space);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Body: stacked on mobile */
+.recipe-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space);
+  padding: var(--space);
+}
+
+.recipe-body h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+
+.ingredients ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.steps ol {
+  padding-left: 1.25rem;
+}
+
+.recipe-body li {
+  margin-bottom: 0.5rem;
+}
+
+.recipe-body li::marker {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Desktop: ingredients beside steps */
+@media (min-width: 768px) {
+  body {
+    padding: 3rem var(--space);
+  }
+
+  .recipe-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .recipe-body {
+    grid-template-columns: 1fr 1.6fr;
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+}
